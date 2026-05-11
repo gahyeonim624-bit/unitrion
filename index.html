@@ -9,11 +9,25 @@
 </head>
 
 <body>
+  <header class="notion-header">
+    <nav class="notion-breadcrumb" aria-label="현재 위치">
+      <span class="notion-breadcrumb__item notion-breadcrumb__item--current">
+        <span class="notion-breadcrumb__icon">🚩</span>
+        <span class="notion-breadcrumb__text">유니트리온</span>
+      </span>
+    </nav>
+  </header>
+
   <!-- 상단 배너 영역 -->
   <header class="banner">
+    <img src="./assets/images/banner-icon.png" alt="">
     <!-- 배경 이미지가 들어가는 곳입니다. style.scss에서 배경 이미지를 설정할 수 있습니다. -->
     <!-- 프로필 로고 -->
     <div class="profile-logo">
+      <div class="logo-text">
+        <img src="https://www.celltrion.com/front/assets/common/images/img_header_logo.png" alt="셀트리온" class="logo-img">
+        <span class="logo-name">유니트리온</span>
+      </div>
     </div>
   </header>
 
@@ -31,7 +45,9 @@
 
       <!-- 설명 박스 -->
       <div class="description-box">
-        쿠팡 그룹의 노동조합 쿠니언 (Cou-nion)의 홈페이지입니다.<br><br>
+        셀트리온 그룹의 노동조합 유니트리온(Unitrion)의 홈페이지입니다.<br><br>
+        카카오톡 채널: <a href="https://pf.kakao.com/_XKTKX" class="link-item"
+          target="_blank">http://pf.kakao.com/_XKTKX</a><br>
         이메일: celltrion.union@gmail.com
       </div>
 
@@ -39,15 +55,15 @@
       <div class="main-links-section">
         <h2>주요링크</h2>
         <div class="links-grid">
-          <a href="#" class="link-item">
+          <!-- <a href="#" class="link-item">
             <span class="icon">🤝</span> <span class="txt">노동조합 가입하기</span>
-          </a>
+          </a> -->
           <a href="./html/faq.html" class="link-item">
             <span class="icon">❓</span> <span class="txt">자주 묻는 질문들 (FAQ)</span>
           </a>
-          <a href="./html/organization.html" class="link-item">
+          <!-- <a href="./html/organization.html" class="link-item">
             <span class="icon">👥</span> <span class="txt">조직도</span>
-          </a>
+          </a> -->
           <a href="https://kctfu.org/bbs/board.php?bo_table=law" class="link-item" target="_blank">
             <span class="icon">🗒️</span> <span class="txt">법률·노무·세무 상담</span>
           </a>

@@ -32,14 +32,22 @@ a {
 // Layout
 .banner {
   width: 100%;
-  height: 388px;
-  background-color: $banner-bg;
-  background-image: linear-gradient(to bottom, #5ca8f5, #88c6f8);
-  // 실제 이미지 경로가 있다면 아래 주석을 해제하고 경로를 입력하세요.
-  // background-image: url('banner-image.jpg');
+  height: 470px;
+  background-color: #55677a;
+  background-image: linear-gradient(to bottom, #fff, #016094);
+  // background-image: url("../images/banner-icon.png");
   background-size: cover;
-  background-position: center bottom;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
+  img {
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 768px) {
+    height: 250px;
+  }
 }
 
 .container {
@@ -87,27 +95,23 @@ a {
     text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 0 10px;
+  }
 
-    .coupang {
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
+  .logo-img {
+    width: 82px;
+    height: auto;
+    display: block;
+  }
 
-      @media (max-width: 768px) {
-        font-size: 15px;
-      }
-    }
-
-    .counion {
-      font-size: 22px;
-      font-weight: 700;
-      color: #29abe2;
-      margin-top: -2px;
-
-      @media (max-width: 768px) {
-        font-size: 18px;
-      }
-    }
+  .logo-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5abb5c;
+    letter-spacing: -0.3px;
+    line-height: 1;
   }
 }
 
@@ -342,6 +346,339 @@ a {
         max-width: 100%;
         height: auto;
         border-radius: 4px;
+      }
+    }
+  }
+}
+
+// FAQ Back Link
+.faq-back-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: #787774;
+
+  &:hover {
+    color: #37352f;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+// ── Notion-style Header ──────────────────────────────────────────────────────
+.notion-header {
+  height: 44px;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.notion-breadcrumb {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  overflow: hidden;
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13.5px;
+    color: rgba(55, 53, 47, 0.65);
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background 0.15s;
+    max-width: 240px;
+    overflow: hidden;
+
+    &--current {
+      color: rgba(55, 53, 47, 0.85);
+      font-weight: 500;
+    }
+  }
+
+  a#{&}__item:hover {
+    background: rgba(55, 53, 47, 0.08);
+    color: rgba(55, 53, 47, 0.85);
+  }
+
+  &__icon {
+    font-size: 14px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__sep {
+    font-size: 13px;
+    color: rgba(55, 53, 47, 0.3);
+    flex-shrink: 0;
+    padding: 0 2px;
+    user-select: none;
+  }
+}
+
+// ── Site Header (legacy) ─────────────────────────────────────────────────────
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+  &__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @media (max-width: 768px) {
+      padding: 0 20px;
+    }
+  }
+
+  &__mobile-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    margin-left: auto;
+
+    span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #555;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+
+    &:hover span {
+      background: #111;
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  }
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+
+  &__mark {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #5ca8f5, #3d8ee8);
+    color: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+
+  &__name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: -0.3px;
+  }
+
+  &__sub {
+    font-size: 10px;
+    color: #999;
+    margin-top: 3px;
+
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+}
+
+.site-nav {
+  margin-left: auto;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 2px;
+
+    li a {
+      display: block;
+      padding: 7px 14px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #555;
+      border-radius: 6px;
+      transition:
+        background 0.15s,
+        color 0.15s;
+      white-space: nowrap;
+
+      &:hover {
+        background: #f4f4f4;
+        color: #111;
+      }
+    }
+
+    li.active a {
+      color: #5ca8f5;
+      font-weight: 700;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    padding: 8px 0;
+    z-index: 99;
+
+    &.is-open {
+      display: block;
+    }
+
+    &__list {
+      flex-direction: column;
+      gap: 0;
+      padding: 0 16px;
+
+      li a {
+        padding: 13px 10px;
+        border-radius: 0;
+        border-bottom: 1px solid #f5f5f5;
+        font-size: 15px;
+
+        &:hover {
+          background: #f8f8f8;
+        }
+      }
+
+      li:last-child a {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+// ── Banner subpage variant ───────────────────────────────────────────────────
+.banner--sub {
+  height: 200px;
+
+  @media (max-width: 768px) {
+    height: 160px;
+  }
+}
+
+// ── Breadcrumb ───────────────────────────────────────────────────────────────
+.breadcrumb {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+
+  @media (max-width: 768px) {
+    bottom: 16px;
+  }
+
+  &__inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
+
+    &--current {
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+
+  a#{&}__item:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  &__sep {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+  }
+}
+
+// FAQ Answer Content
+.faq-answer {
+  p {
+    font-size: 16px;
+    color: #37352f;
+    line-height: 1.8;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ol {
+    margin: 8px 0 16px;
+    padding-left: 24px;
+
+    li {
+      font-size: 16px;
+      color: #37352f;
+      line-height: 1.8;
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }

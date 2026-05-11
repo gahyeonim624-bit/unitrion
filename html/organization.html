@@ -9,10 +9,22 @@
 </head>
 
 <body>
-  <!-- 상단 배너 영역 -->
-  <header class="banner">
-    <!-- 배경 이미지 -->
+  <header class="notion-header">
+    <nav class="notion-breadcrumb" aria-label="현재 위치">
+      <a class="notion-breadcrumb__item" href="../index.html">
+        <span class="notion-breadcrumb__icon">🚩</span>
+        <span class="notion-breadcrumb__text">유니트리온</span>
+      </a>
+      <span class="notion-breadcrumb__sep">/</span>
+      <span class="notion-breadcrumb__item notion-breadcrumb__item--current">
+        <span class="notion-breadcrumb__icon">👥</span>
+        <span class="notion-breadcrumb__text">조직도</span>
+      </span>
+    </nav>
   </header>
+
+  <!-- 상단 배너 영역 -->
+  <header class="banner banner--sub"></header>
 
   <div class="container notion-container">
     <main class="content detail-content">
