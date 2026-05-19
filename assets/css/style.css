@@ -613,4 +613,123 @@ a {
 }
 .faq-answer ol li:last-child {
   margin-bottom: 0;
+}
+
+.split-section {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .split-section {
+    flex-direction: column;
+  }
+}
+.split-section .empty-half {
+  flex: 1;
+  display: block;
+}
+@media (max-width: 1024px) {
+  .split-section .empty-half {
+    display: none;
+  }
+}
+.split-section .half-section {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.split-section .half-section h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+.split-section .half-section .content-area {
+  flex: 1;
+}
+.split-section .half-section .text-content {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.split-section .half-section .text-content p {
+  margin-bottom: 16px;
+}
+.split-section .half-section .text-content p:last-child {
+  margin-bottom: 0;
+}
+.split-section .half-section .text-content .highlight-text {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-left: 4px solid #5ca8f5;
+  border-radius: 4px;
+}
+.split-section .half-section .text-content .demands-list {
+  margin: 24px 0;
+  padding: 24px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+.split-section .half-section .text-content .demands-list .demands-title {
+  font-size: 16px;
+  color: #111;
+  margin-bottom: 16px;
+}
+.split-section .half-section .text-content .demands-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+.split-section .half-section .text-content .demands-list ul li {
+  margin-bottom: 20px;
+}
+.split-section .half-section .text-content .demands-list ul li:last-child {
+  margin-bottom: 0;
+}
+.split-section .half-section .text-content .demands-list ul li strong {
+  display: block;
+  color: #111;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.split-section .half-section .text-content .demands-list ul li p {
+  margin-bottom: 0;
+  font-size: 14.5px;
+  color: #555;
+}
+.split-section .half-section .text-content .conclusion-text {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px dashed #e5e5e5;
+}
+.split-section .half-section .text-content .conclusion-text p {
+  color: #333;
+}
+.split-section .half-section .text-content .signature {
+  margin-top: 40px;
+  text-align: right;
+  font-size: 14px;
+  color: #666;
+}
+.split-section .half-section .text-content .signature strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 15px;
+  color: #111;
+}
+.split-section .half-section .empty-area {
+  min-height: 150px;
+  background-color: #f9f9f9;
+  border: 1px dashed #ccc;
+  border-radius: 4px;
 }/*# sourceMappingURL=style.css.map */
