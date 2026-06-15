@@ -704,6 +704,44 @@ a {
     }
   }
 
+  .split-right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-self: stretch;
+    width: 100%;
+
+    .half-section {
+      flex: none;
+
+      &.image-card {
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid $border-color;
+        border-radius: 8px;
+        background-color: #fff;
+        transition: all 0.2s ease;
+
+        .press-image-box {
+          margin-top: 0;
+          border: none;
+          border-radius: 0;
+          box-shadow: none;
+
+          &:hover {
+            box-shadow: none;
+          }
+        }
+
+        &:hover {
+          border-color: #bbb;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+      }
+    }
+  }
+
   .half-section {
     flex: 1;
     background-color: #fff;
@@ -957,6 +995,72 @@ a {
       font-size: 14.5px;
       margin: 0;
       font-weight: 500;
+    }
+  }
+}
+
+/* 공지사항 하단 이미지 박스 스타일 */
+.press-image-box {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid $border-color;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: #bbb;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/* 이미지 갤러리 스타일 */
+.image-gallery-section {
+  margin-top: 40px;
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+
+  .gallery-item {
+    background-color: #fff;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      border-color: #bbb;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      transform: translateY(-2px);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
   }
 }
